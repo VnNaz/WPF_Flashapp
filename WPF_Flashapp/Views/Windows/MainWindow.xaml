@@ -1,0 +1,43 @@
+﻿<Window x:Class="WPF_Flashapp.Views.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Flashapp.Views.Windows"
+        xmlns:UserControls="clr-namespace:WPF_Flashapp.Views.UserControls"
+        mc:Ignorable="d"
+        Height="600" Width="900"
+        WindowStyle="None"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Window.Resources>
+        
+    </Window.Resources>
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0"/>
+    </WindowChrome.WindowChrome>
+    <Grid Background="#252737">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <UserControls:AppLogo/>
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+            <UserControls:WindowTitle Grid.Column="1" VerticalAlignment="Top"/>
+        </Grid>
+        <StackPanel Grid.Row="1" Margin="0,32,0,0">
+            <Button Content="Home" Style="{StaticResource NavButon}"/>
+            <Button Content="Tag" Style="{StaticResource NavButon}"/>
+            <Button Content="Group" Style="{StaticResource NavButon}"/>
+            <Button Content="Learning" Style="{StaticResource NavButon}"/>
+            <Button Content="Setting" Style="{StaticResource NavButon}"/>
+        </StackPanel>
+    </Grid>
+</Window>
